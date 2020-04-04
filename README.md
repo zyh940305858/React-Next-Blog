@@ -1,30 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+# React-Next-Blog
+> React搭建的个人博客项目
 
-## Getting Started
-
-First, run the development server:
+## 项目启动
 
 ```bash
-npm run dev
+git clone https://github.com/zyh940305858/React-Next-Blog  
+
+cd React-Next-Blog
+
+npm run dev  
 # or
-yarn dev
+yarn dev  
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+用浏览器打开[http://localhost:3000](http://localhost:3000)以查看结果。  
+你可以通过修改“pages/index.js”来开始编辑页面。当您编辑文件时，页面会自动更新。  
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on ZEIT Now
-
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 项目模块
