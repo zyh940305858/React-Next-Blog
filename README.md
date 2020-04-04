@@ -1,6 +1,9 @@
 # React-Next-Blog
 > React搭建的个人博客项目
 
+## 技术栈
+    React Hooks + Antd + SSR
+
 ## 项目启动
 
 ```bash
@@ -18,3 +21,6 @@ yarn dev
 
 
 ## 项目模块
+ - [x] 项目初始化 (Project init)  
+ - [x] 项目配置 (Project configuration)  
+   - [x] 外部CSS支持 (CSS style) && Antd
