@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Header from '../components/Header';
 
 const Home = () => (
   <div>
@@ -7,7 +8,8 @@ const Home = () => (
         Home
       </title>
     </Head>
+    <Header />
   </div>
 )
 
-export default Home
+export default Home;
