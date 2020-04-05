@@ -1,6 +1,15 @@
+/**
+ * @author Brain Hang (zyh940305858@163.com)
+ * @creationDate 2020 04 04
+ * @description 首页
+ * @lastEditDate 2020 04 04
+ */
+
+
 import React,{ useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
+import Author from '../components/Author';
 import { Row, Col, List } from 'antd';
 import { CalendarOutlined, FolderOpenOutlined, FireOutlined } from '@ant-design/icons';
 
@@ -32,6 +41,7 @@ const Home = () =>{
         type="flex" 
         justify="center"
       >
+        {/* 左侧 */}
         <Col 
           className="comm_left" 
           xs={24} 
@@ -40,6 +50,8 @@ const Home = () =>{
           lg={18} 
           xl={14} 
         >
+
+          {/* 主页列表 */}
           <List 
             header={<div>最新日志</div>}
             itemLayout="vertical"
@@ -49,13 +61,13 @@ const Home = () =>{
                 <div className="list_title">{item.title}</div>
                 <div className="list_icon">
                   <span>
-                    <CalendarOutlined />2020-4-5
+                    <CalendarOutlined /> 2020-4-5
                   </span>
                   <span>
-                    <FolderOpenOutlined />随笔
+                    <FolderOpenOutlined /> 随笔
                   </span>
                   <span>
-                    <FireOutlined />1000人数
+                    <FireOutlined /> 1000人数
                   </span>
                 </div>
                 <div className="list_context">{item.context}</div>
@@ -63,6 +75,8 @@ const Home = () =>{
             )}
           />
         </Col>
+
+        {/* 右侧 */}
         <Col 
           className="comm_right"
           xs={0}
@@ -71,7 +85,7 @@ const Home = () =>{
           lg={5}
           xl={4}
         >
-          右侧
+          <Author />
         </Col>
       </Row>
     </div>

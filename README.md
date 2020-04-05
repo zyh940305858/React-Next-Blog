@@ -29,3 +29,4 @@ yarn dev
    - [x] 头部导航组件 (Header nav component)
    - [x] 主页两栏布局 (Home two-column layout)
    - [x] 主页列表 (Home list)
+   - [x] 作者信息 (Author information)
