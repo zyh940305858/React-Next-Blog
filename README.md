@@ -24,5 +24,8 @@ yarn dev
  - [x] 项目初始化 (Project init)  
  - [x] 项目配置 (Project configuration)  
    - [x] 外部CSS支持 (CSS style) && Antd
+   - [x] 添加Antd Icon支持 (Add antd icon)
  - [x] 项目组件 (Project component)
    - [x] 头部导航组件 (Header nav component)
+   - [x] 主页两栏布局 (Home two-column layout)
+   - [x] 主页列表 (Home list)
