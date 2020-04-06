@@ -31,3 +31,5 @@ yarn dev
    - [x] 主页列表 (Home list)
    - [x] 作者信息 (Author information)
    - [x] 广告信息 (Advert information)
+   - [x] 页脚信息 (Footer information)
+   - [x] 文章列表 (Article list)

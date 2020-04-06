@@ -2,15 +2,17 @@
  * @author Brain Hang (zyh940305858@163.com)
  * @creationDate 2020 04 04
  * @description 首页
- * @lastEditDate 2020 04 04
+ * @lastEditDate 2020 04 06
  */
 
 
 import React,{ useState } from 'react';
+import '../public/style/pages/index.css';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Author from '../components/Author';
 import Advert from '../components/Advert';
+import Footer from '../components/Footer';
 import { Row, Col, List } from 'antd';
 import { CalendarOutlined, FolderOpenOutlined, FireOutlined } from '@ant-design/icons';
 
@@ -92,6 +94,7 @@ const Home = () =>{
           <Advert />
         </Col>
       </Row>
+      <Footer />
     </div>
   )
 } 
