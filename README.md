@@ -34,3 +34,5 @@ yarn dev
    - [x] 页脚信息 (Footer information)
    - [x] 文章列表 (Article list)
    - [x] 详情页面 (Detail page)
+   - [x] 添加富文本编辑器 (Add markdown)
+   - [x] 添加富文本编辑器导航 (Add markdown nav)
