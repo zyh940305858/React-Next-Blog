@@ -33,3 +33,4 @@ yarn dev
    - [x] 广告信息 (Advert information)
    - [x] 页脚信息 (Footer information)
    - [x] 文章列表 (Article list)
+   - [x] 详情页面 (Detail page)

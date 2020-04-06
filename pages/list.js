@@ -66,19 +66,19 @@ const ArticleList = () =>{
             dataSource={myList}
             renderItem={item=>(
                 <List.Item>
-                <div className="list_title">{item.title}</div>
-                <div className="list_icon">
-                    <span>
-                    <CalendarOutlined /> 2020-4-5
-                    </span>
-                    <span>
-                    <FolderOpenOutlined /> 随笔
-                    </span>
-                    <span>
-                    <FireOutlined /> 1000人数
-                    </span>
-                </div>
-                <div className="list_context">{item.context}</div>
+                  <div className="list_title">{item.title}</div>
+                  <div className="list_icon">
+                      <span>
+                      <CalendarOutlined /> 2020-4-5
+                      </span>
+                      <span>
+                      <FolderOpenOutlined /> 随笔
+                      </span>
+                      <span>
+                      <FireOutlined /> 1000人数
+                      </span>
+                  </div>
+                  <div className="list_context">{item.context}</div>
                 </List.Item>
             )}
             />
