@@ -5,7 +5,6 @@
  * @lastEditDate 2020 04 04
  */
 
-import React from 'react';
 import '../public/style/components/header.css';
 import { Row, Col, Menu } from 'antd';
 import { HomeOutlined, PlayCircleOutlined, CoffeeOutlined } from '@ant-design/icons';

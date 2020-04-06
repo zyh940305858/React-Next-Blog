@@ -30,3 +30,4 @@ yarn dev
    - [x] 主页两栏布局 (Home two-column layout)
    - [x] 主页列表 (Home list)
    - [x] 作者信息 (Author information)
+   - [x] 广告信息 (Advert information)

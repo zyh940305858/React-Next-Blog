@@ -10,6 +10,7 @@ import React,{ useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Author from '../components/Author';
+import Advert from '../components/Advert';
 import { Row, Col, List } from 'antd';
 import { CalendarOutlined, FolderOpenOutlined, FireOutlined } from '@ant-design/icons';
 
@@ -85,7 +86,10 @@ const Home = () =>{
           lg={5}
           xl={4}
         >
+          {/* 个人信息 */}
           <Author />
+          {/* 通用广告栏 */}
+          <Advert />
         </Col>
       </Row>
     </div>
