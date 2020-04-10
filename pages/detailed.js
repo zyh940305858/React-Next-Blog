@@ -9,6 +9,7 @@ import React from 'react';
 import Head from 'next/head';
 import '../public/style/pages/detailed.css';
 import { Row, Col, Breadcrumb, Affix } from 'antd';
+import axios from 'axios';
 import { CalendarOutlined, FolderOpenOutlined, FireOutlined } from '@ant-design/icons';
 import Header from '../components/Header';
 import Author from '../components/Author';
@@ -134,6 +135,22 @@ const Detailed = () =>{
             <Footer />
         </div>
     )
+}
+
+Detailed.getInitialProps = async(context)=>{
+    console.log(context.query.id);
+
+    let id = context.query.id;
+
+    const promise = new Promise(reslove=>{
+        axios('http://127.0.0.1:7001/default/getArticleById/'+id)
+        .then(res=>{
+            console.log(res)
+            reslove(res.data.data[0])
+        })
+    })
+
+    return await promise;
 }
 
 export default Detailed;
