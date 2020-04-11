@@ -38,3 +38,5 @@ yarn dev
    - [x] 添加富文本编辑器 (Add markdown)
    - [x] 添加富文本编辑器导航 (Add markdown nav)
    - [x] 完成首页列表数据渲染 (Finish home list data rendering)
+   - [x] 完成markdown以及代码高亮显示 (Finish markdown and code highlighting show)
+   - [x] 完成markdown导航 (Finish markdown nav)
