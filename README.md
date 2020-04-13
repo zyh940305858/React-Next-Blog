@@ -42,3 +42,4 @@ yarn dev
    - [x] 完成markdown以及代码高亮显示 (Finish markdown and code highlighting show)
    - [x] 完成markdown导航 (Finish markdown nav)
    - [x] 重构头部导航跳转页面 (Refactoring header nav go to page)
+   - [x] 完成根据导航类型渲染数据 (Finsih render data by nav type)

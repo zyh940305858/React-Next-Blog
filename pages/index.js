@@ -102,10 +102,9 @@ const Home = (list) =>{
 Home.getInitialProps = async () =>{
   const promise = new Promise((resolve,reject)=>{
     axios(servicePath.getArticleList)
-    .then(res=>{
-      console.log('----->',res.data)
-      resolve(res.data)
-    })
+    .then(
+      res=>resolve(res.data)
+    )
   })
 
   return await promise;
