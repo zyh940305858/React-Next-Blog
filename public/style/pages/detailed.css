@@ -80,9 +80,9 @@ iframe{
 .title_level3{
     display: none !important;
 }
-.ant-anchor-link-title{
+.ant_anchor_link_title{
     font-size: 12px !important;
 }
-.ant-anchor-wrapper{
+.ant_anchor_wrapper{
     padding: 5px !important;
 }

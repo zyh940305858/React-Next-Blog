@@ -25,7 +25,8 @@ yarn dev
  - [x] 项目配置 (Project configuration)  
    - [x] 外部CSS支持 (CSS style) && Antd
    - [x] 添加Antd Icon支持 (Add antd icon)
-   - [x] 添加axios
+   - [x] 添加axios (Add axios)
+   - [x] 重构全局apiUrl (Refactoring global apiUrl)
  - [x] 项目组件 (Project component)
    - [x] 头部导航组件 (Header nav component)
    - [x] 主页两栏布局 (Home two-column layout)
@@ -40,3 +41,4 @@ yarn dev
    - [x] 完成首页列表数据渲染 (Finish home list data rendering)
    - [x] 完成markdown以及代码高亮显示 (Finish markdown and code highlighting show)
    - [x] 完成markdown导航 (Finish markdown nav)
+   - [x] 重构头部导航跳转页面 (Refactoring header nav go to page)
