@@ -30,10 +30,11 @@ const Header = () =>{
     },[])
 
     const hanleClick = e =>{
-        if(e.key==0){
-            Router.push('/index');
-        }else{
+        console.log(e)
+        if(e.key!=="0"){
             Router.push('/list?id='+e.key);
+        }else{
+            Router.push('/index');
         }
     }
 
@@ -46,6 +47,9 @@ const Header = () =>{
                 </Col>
                 <Col xs={0} sm={0} md={14} lg={8} xl={6}>
                     <Menu mode="horizontal" onClick={hanleClick}>
+                        <Menu.Item key={0}>
+                            首页
+                        </Menu.Item>
                         {
                             navArray.map(item=>{
 

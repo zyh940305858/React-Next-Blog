@@ -14,6 +14,9 @@ import Advert from '../components/Advert';
 import Footer from '../components/Footer';
 import { Row, Col, List, Breadcrumb } from 'antd';
 import { CalendarOutlined, FolderOpenOutlined, FireOutlined } from '@ant-design/icons';
+import marked from 'marked';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/monokai-sublime.css';
 import axios from 'axios';
 import servicePath from '../config/apiUrl';
 
@@ -23,6 +26,20 @@ const ArticleList = (list) =>{
   const [myList,setMyList] = useState(list.data);
   useEffect(()=>{
     setMyList(list.data)
+  })
+  
+  const renderer = new marked.Renderer();
+  marked.setOptions({
+    renderer:renderer,
+    gfm: true,
+    pedantic: false, // 是否容错
+    sanitize: false, // 是否忽略html标签
+    tables: true, // 是否支持表格
+    breaks: true, // 是否支持换行符
+    smartLists: true, // 自动渲染列表
+    highlight: function(code){
+        return hljs.highlightAuto(code).value
+    }
   })
 
   return (
@@ -61,7 +78,6 @@ const ArticleList = (list) =>{
 
           {/* 主页列表 */}
           <List 
-            header={<div>最新日志</div>}
             itemLayout="vertical"
             dataSource={myList}
             renderItem={item=>(
@@ -82,7 +98,10 @@ const ArticleList = (list) =>{
                         <FireOutlined /> {item.view_count}人
                       </span>
                   </div>
-                  <div className="list_context">{item.introduce}</div>
+                  <div 
+                    className="list_context" 
+                    dangerouslySetInnerHTML={{ __html: marked(item.introduce) }}
+                  ></div>
                 </List.Item>
             )}
           />

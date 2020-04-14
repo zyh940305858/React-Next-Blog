@@ -18,10 +18,27 @@ import Author from '../components/Author';
 import Advert from '../components/Advert';
 import Footer from '../components/Footer';
 import servicePath from '../config/apiUrl';
+import marked from 'marked';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/monokai-sublime.css';
 
 const Home = (list) =>{
 
-  const [myList,setMyList] = useState(list.data)
+  const [myList,setMyList] = useState(list.data);
+  console.log(myList)
+  const renderer = new marked.Renderer();
+  marked.setOptions({
+    renderer:renderer,
+    gfm: true,
+    pedantic: false, // 是否容错
+    sanitize: false, // 是否忽略html标签
+    tables: true, // 是否支持表格
+    breaks: true, // 是否支持换行符
+    smartLists: true, // 自动渲染列表
+    highlight: function(code){
+        return hljs.highlightAuto(code).value
+    }
+  });
 
   return (
     <div>
@@ -52,7 +69,6 @@ const Home = (list) =>{
 
           {/* 主页列表 */}
           <List 
-            header={<div>最新日志</div>}
             itemLayout="vertical"
             dataSource={myList}
             renderItem={item=>(
@@ -73,7 +89,10 @@ const Home = (list) =>{
                     <FireOutlined /> {item.view_count}
                   </span>
                 </div>
-                <div className="list_context">{item.introduce}</div>
+                <div 
+                  className="list_context" 
+                  dangerouslySetInnerHTML={{ __html: marked(item.introduce) }}
+                ></div>
               </List.Item>
             )}
           />
@@ -100,7 +119,7 @@ const Home = (list) =>{
 } 
 
 Home.getInitialProps = async () =>{
-  const promise = new Promise((resolve,reject)=>{
+  const promise = new Promise(resolve=>{
     axios(servicePath.getArticleList)
     .then(
       res=>resolve(res.data)
